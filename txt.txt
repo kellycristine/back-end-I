@@ -1,0 +1,88 @@
+Desafio final
+
+Neste módulo vamos aprender sobre
+lógica de programação, javascript, API
+Rest, NodeJS, Express, libs e como subir
+uma aplicação back-end em produção.
+O objetivo desta avaliação é verificar se
+vamos atingir os conhecimentos
+propostos para este módulo.
+Módulo Back-end I
+
+Desafio final
+
+Aplicação Lista de Recados
+
+● Vamos criar um back-end que contém
+as seguintes funcionalidades:
+○ Criação de conta
+○ Login
+○ CRUD* de recados
+
+*CRUD (create, read, update e delete)
+O que vamos fazer?
+
+Desafio final
+
+● Dados de um usuário:
+○ Identificador
+○ Nome
+○ E-mail
+○ Senha
+
+● Dados de um recado:
+○ Identificador
+○ Título
+○ Descrição
+O que vamos fazer?
+
+Desafio final
+
+Regras
+● Não pode ter mais de um usuário
+com o mesmo e-mail
+
+● O login deve ser feito com e-mail e
+senha
+
+● Cada recado deve ser de um único
+usuário.
+O que vamos fazer?
+
+O que será avaliado?
+
+MAS AINDA NÃO SEI NADA
+DE TAL COISA AINDA!!
+
+Calma calma pessoal, nada de
+desespero...
+
+O que será avaliado?
+
+Será avaliado tudo que foi ensinado em
+aula...
+
+Além disso, prestem atenção nos seguintes
+pontos:
+
+1. Boas práticas
+2. Código limpo
+3. Utilização dos recursos da linguagem
+
+O que será avaliado?
+
+O projeto não deve ser
+incrementado com
+nada mais do que está
+sendo pedido.
+
+A entrega
+
+1. Repositório no Github para o
+back-end
+
+2. Link da aplicação no rodando no
+servidor
+
+Data limite: 1 semana depois que o
+módulo acabar

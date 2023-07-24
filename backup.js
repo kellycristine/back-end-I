@@ -16,55 +16,47 @@ function verificarLogin(req, res, next) {
     res.status(401).send("Acesso não autorizado. Faça o login primeiro.");
   }
 }
-const bemVindo = {
-  "Bem Vindo": "Bem vindo a API Recados!",
-  "Rotas": [
-    {
-      "Função": "Cadastrar um usuário",
-      "Rota": "/cadastrar-usuario",
-      "Método": "POST"
-    },
-    {
-      "Função": "Fazer login",
-      "Rota": "/login/:idUsuario",
-      "Método": "GET"
-    },
-    {
-      "Função": "Criar um recado",
-      "Rota": "/criarRecado/:idUsuario",
-      "Método": "POST"
-    },
-    {
-      "Função": "Listar recados",
-      "Rota": "/recados/:idUsuario",
-      "Método": "GET"
-    },
-    {
-      "Função": "Editar recado",
-      "Rota": "/recados/:idUsuario/:idRecado",
-      "Método": "PUT"
-    },
-    {
-      "Função": "Deletar recado",
-      "Rota": "/recados/:idUsuario/:idRecado",
-      "Método": "DELETE"
-    },
-    {
-      "Função": "Deletar perfil",
-      "Rota": "/delete/:idUsuario",
-      "Método": "DELETE"
-    },
-    {
-      "Função": "Sair do perfil",
-      "Rota": "/sair/:idUsuario",
-      "Método": "DELETE"
-    }
-  ]
-};
-
 
 app.get("/", (req, res) => {
-  res.send(bemVindo)
+  res.send(`Bem vindo a API Recados!
+  
+Abaixo estão as rotas e os métodos necessários!
+  
+Função: Cadastrar um usuário:
+Rota: /cadastrar-usuario
+Método: POST
+
+Função: Fazer login
+Rota: /login/:idUsuario
+Método: GET
+
+Função: Criar um recado
+Rota: /criarRecado/:idUsuario
+Método: POST
+
+
+Função: Listar recados
+Rota: /recados/:idUsuario
+Método: GET
+
+
+Função: Editar recado
+Rota: /recados/:idUsuario/:idRecado
+Método: PUT
+
+Função: Deletar recado
+Rota: /recados/:idUsuario/:idRecado
+Método:DELETE
+
+Função: Deletar perfil
+Rota: /delete/:idUsuario
+Método:DELETE
+
+
+Função: Sair do perfil 
+Rota: /sair/:idUsuario
+Método:DELETE
+ `);
 });
 
 //  ROTA CRIAR USUÁRIO
@@ -77,6 +69,7 @@ app.post("/cadastrar-usuario", (req, res) => {
   if (nome === undefined || email === undefined || senha === undefined) {
     res.status(401);
     res.send(`Insira um dado válido. Veja o exemplo abaixo:
+
               { 
                 "nome":"exemplo", 
                 "email": "exemplo@email.com",
@@ -95,7 +88,8 @@ app.post("/cadastrar-usuario", (req, res) => {
     idUsuario++;
     res.send(
       `Usuário cadastrado com sucesso! 
-       O seu idUsuario é: ${novousuario.idUsuario}`
+      
+      O seu idUsuario é: ${novousuario.idUsuario}`
     );
   }
 });
@@ -111,6 +105,7 @@ app.get("/login/:idUsuario", (req, res) => {
   if (email === undefined || senha === undefined) {
     res.status(404).send(`Tentativa inválida!
       Forneça o id do usuário após a rota e no body(json) envie o email e a senha:
+
       {
         "email": "email@example.com",
         "senha": "123"
@@ -160,10 +155,10 @@ app.post("/criarRecado/:idUsuario", verificarLogin, (req, res) => {
     if (titulo === undefined || descricao === undefined) {
       res.status(404).send(`Insira um dado válido. Veja o exemplo abaixo:
 
-        { 
-          "titulo":"titulo1", 
-          "descricao": "descricao1"
-        }`);
+              { 
+                "titulo":"titulo1", 
+                "descricao": "descricao1"
+              }`);
     } else {
       idRecado++;
       recados.push(novoRecado);

@@ -1,8 +1,14 @@
 {
-    "name": "avaliacao-final",
-    "version": "1.0.0",
-    "type": "module",
-    "dependencies": {
-      "express": "^4.18.2"
-    }
+  "name": "avaliacao_final_intro_ao_back_end",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kelly",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
   }
+}
